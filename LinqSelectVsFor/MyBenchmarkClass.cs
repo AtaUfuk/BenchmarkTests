@@ -4,6 +4,7 @@ using LinqSelectVsFor.Models;
 
 namespace LinqSelectVsFor
 {
+	[MemoryDiagnoser]
 	public class MyBenchmarkClass
 	{
 		private List<Corporate> corporates { get; set; }
@@ -18,7 +19,7 @@ namespace LinqSelectVsFor
 		}
 
 		[Benchmark]
-		public List<CorporateUpdate> CreateDtoWithLinqSelect()
+		public List<CorporateUpdate> CreateDtoWithLinqSelectDirectReturn()
 		{
 			return corporates.Select(x => new CorporateUpdate()
 			{
@@ -34,6 +35,28 @@ namespace LinqSelectVsFor
 				UpdatedId = x.Id,
 				UpdatedUser = x.UpdatedUserId
 			}).ToList();
+		}
+
+
+		[Benchmark]
+		public List<CorporateUpdate> CreateDtoWithLinqSelect()
+		{
+			List<CorporateUpdate> result = [];
+			result= corporates.Select(x => new CorporateUpdate()
+			{
+				Title = x.Title,
+				BannerUrl = x.BannerUrl,
+				CDate = x.CreatedDate,
+				Content = x.Content,
+				CreatedUser = x.CreatedUserId,
+				IsActive = x.IsActive,
+				SeqNumber = x.SeqNumber,
+				ShortContent = x.ShortContent,
+				UDate = x.UpdatedDate,
+				UpdatedId = x.Id,
+				UpdatedUser = x.UpdatedUserId
+			}).ToList();
+			return result;
 		}
 
 		[Benchmark]
@@ -55,6 +78,31 @@ namespace LinqSelectVsFor
 					UDate = corporates[i].UpdatedDate,
 					UpdatedId = corporates[i].Id,
 					UpdatedUser = corporates[i].UpdatedUserId
+				};
+				result.Add(cu);
+			}
+			return result;
+		}
+
+		[Benchmark]
+		public List<CorporateUpdate> CreateDtoWithForEach()
+		{
+			List<CorporateUpdate> result = [];
+			foreach (var item in corporates)
+			{
+				CorporateUpdate cu = new()
+				{
+					BannerUrl = item.BannerUrl,
+					CDate = item.CreatedDate,
+					Content = item.Content,
+					CreatedUser = item.CreatedUserId,
+					IsActive = item.IsActive,
+					SeqNumber = item.SeqNumber,
+					ShortContent = item.ShortContent,
+					UDate = item.UpdatedDate,
+					Title = item.Title,
+					UpdatedId = item.Id,
+					UpdatedUser = item.UpdatedUserId
 				};
 				result.Add(cu);
 			}

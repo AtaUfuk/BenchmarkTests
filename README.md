@@ -9,7 +9,8 @@
 <p>Bu proje 2 tane metodun performans testini barındırmaktadır.</p>
 <p>Bu metodlar içerisinde linq any/all metodlarının birbirleri arasında performans farklarının ölçümünü listeler.</p>
 <b>Çıktısı da;</b>
-```
+
+  ```
 
 BenchmarkDotNet v0.14.0, Windows 11 (10.0.26100.3037)
 Intel Core i7-8750H CPU 2.20GHz (Coffee Lake), 1 CPU, 12 logical and 6 physical cores

@@ -1,13 +1,13 @@
 ﻿using AutoFixture;
 using BenchmarkDotNet.Attributes;
-using LinqSelectVsFor.Models;
+using BenchMarkTests.Core.Models;
 
 namespace LinqSelectVsFor
 {
 	[MemoryDiagnoser]
 	public class MyBenchmarkClass
 	{
-		private List<Corporate> corporates { get; set; }
+        private List<Corporate> corporates { get; set; }
 		public MyBenchmarkClass()
 		{
 			corporates = GenerateFakeData();

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqSelectVsFor", "LinqSelectVsFor\LinqSelectVsFor.csproj", "{875DD84B-B6FB-4DDC-8E46-6D26A1ED6A3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqSelectVsFor", "LinqSelectVsFor\LinqSelectVsFor.csproj", "{875DD84B-B6FB-4DDC-8E46-6D26A1ED6A3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqAnyVsAll", "LinqAnyVsAll\LinqAnyVsAll.csproj", "{E151B4EC-A492-479F-8CC2-35686E0A754E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenchmarkTests.Core", "BenchmarkTests.Core\BenchmarkTests.Core.csproj", "{F806DD69-4F40-40BD-B670-39025970229A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{875DD84B-B6FB-4DDC-8E46-6D26A1ED6A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{875DD84B-B6FB-4DDC-8E46-6D26A1ED6A3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{875DD84B-B6FB-4DDC-8E46-6D26A1ED6A3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E151B4EC-A492-479F-8CC2-35686E0A754E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E151B4EC-A492-479F-8CC2-35686E0A754E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E151B4EC-A492-479F-8CC2-35686E0A754E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E151B4EC-A492-479F-8CC2-35686E0A754E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F806DD69-4F40-40BD-B670-39025970229A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F806DD69-4F40-40BD-B670-39025970229A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F806DD69-4F40-40BD-B670-39025970229A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F806DD69-4F40-40BD-B670-39025970229A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

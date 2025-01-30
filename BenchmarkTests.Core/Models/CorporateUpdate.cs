@@ -1,4 +1,4 @@
-﻿namespace LinqSelectVsFor.Models
+﻿namespace BenchMarkTests.Core.Models
 {
 	public class CorporateUpdate
 	{
